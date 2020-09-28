@@ -1,0 +1,12 @@
+{
+    "presets": [
+      // next comes with a predefined babel config when we create .babelrc it overrides that config
+      // We need to define a .babelrc for Jest at least
+      // So we will just use the presets provided next itself!
+      "next/babel"
+    ],
+    "plugins": [
+      // TODO: uninstall this plugin when optional chaining gets enabled by default
+      "@babel/plugin-proposal-optional-chaining",
+    ]
+  }
