@@ -19,17 +19,13 @@ app.prepare().then(async () => {
 
   const apollo = new ApolloServer(apolloServerConfig());
 
-  // // apply apolloserver middleware with a path to the app
+  // apply apolloserver middleware with a path to the app
   apollo.applyMiddleware({ app: server, path: "/api/graphql" });
 
   // custom nextjs route
-  server.get("/a", (req, res) => {
-    return app.render(req, res, "/a", req.query);
-  });
-
-  server.get("/b", (req, res) => {
-    return app.render(req, res, "/b", req.query);
-  });
+  // server.get("/a", (req, res) => {
+  //   return app.render(req, res, "/b", req.query);
+  // });
 
   server.all("*", (req, res) => {
     return handle(req, res);
@@ -37,7 +33,6 @@ app.prepare().then(async () => {
 
   server.listen({ port }, () => {
     console.log(`🚀 Server ready at http://localhost:${port}`);
-    console.log(`GraphQL available at ${apollo.graphqlPath}`);
   });
 
   // handle exception

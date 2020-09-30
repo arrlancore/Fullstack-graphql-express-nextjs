@@ -1,18 +1,31 @@
-import Link from "next/link";
+import { Box, Button, Columns, Container, Stack } from "src/components";
 
-export default function Home() {
-  return (
-    <ul>
-      <li>
-        <Link href="/b" as="/a">
-          <a>go to a</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/a" as="/b">
-          <a>b</a>
-        </Link>
-      </li>
-    </ul>
-  );
-}
+const HomePage = () => (
+  <Container>
+    <Box padding="large">
+      <Button size="large" color="primary" variant="outline">
+        outline large
+      </Button>
+      <Button size="small" color="primary" variant="solid">
+        solid small
+      </Button>
+      <Button enableElevation>default button</Button>
+    </Box>
+
+    <Stack space="small" width="auto">
+      <Columns space="xsmall">
+        <Box> Item 1</Box>
+        <Box> Item 2</Box>
+        <Box> Item 3</Box>
+      </Columns>
+    </Stack>
+
+    <Stack space="small">
+      <Box marginTop="medium"> Item 1</Box>
+      <Box> Item 2</Box>
+      <Box> Item 3</Box>
+    </Stack>
+  </Container>
+);
+
+export default HomePage;
