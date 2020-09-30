@@ -1,7 +1,7 @@
 "use strict";
 
 import { gql } from "apollo-server-express";
-import authSchema from "./app/auth/schema";
+import authSchema from "./auth/schema";
 
 const sharedSchema = gql`
   type PageInfo {

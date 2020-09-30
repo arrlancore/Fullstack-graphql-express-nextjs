@@ -1,6 +1,6 @@
 "use strict";
 import depthLimit from "graphql-depth-limit";
-import allDataLoader from "./dataloaders";
+import allDataLoader from "./grapgql/dataloaders";
 import { gql } from "apollo-server-express";
 import models from "./models";
 import {
@@ -10,8 +10,8 @@ import {
   DateTimeTypeDefinition
 } from "graphql-scalars";
 
-import appSchemas from "./schemas";
-import appResolvers from "./resolvers";
+import appSchemas from "./grapgql/schemas";
+import appResolvers from "./grapgql/resolvers";
 const { getUserByToken } = require("./lib/token");
 
 const dev = process.env.NODE_ENV === "development";

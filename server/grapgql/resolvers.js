@@ -1,4 +1,4 @@
-import authResolver from "./app/auth/resolver";
+import authResolver from "./auth/resolver";
 
 const resolvers = [authResolver];
 

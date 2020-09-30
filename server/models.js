@@ -1,4 +1,4 @@
-import User from "./app/auth/model";
+import User from "./grapgql/auth/model";
 
 const models = {
   User
