@@ -16,6 +16,7 @@ const HomePage = () => (
       <title>next app</title>
     </Head>
     <Container>
+      <h1>NextJs - GraphQL - Express - MongoDB - Redis</h1>
       <Box padding="large">
         <Button size="large" color="primary" variant="outline">
           outline large

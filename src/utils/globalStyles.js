@@ -21,6 +21,7 @@ export const globalStyles = (
       body {
         margin: 0;
         letter-spacing: 0.3px;
+        font-family: "Open Sans", sans-serif;
       }
 
       a {
